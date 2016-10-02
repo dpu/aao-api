@@ -1,5 +1,8 @@
 <?php
 
+$app->get( 'time', function () {
+    return response()->json( ['message' => 'Success', 'time' => time()] );
+} );
 
 $app->get( 'token', 'App\Http\Controllers\TokenController@getToken' );
 
