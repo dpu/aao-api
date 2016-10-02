@@ -14,5 +14,6 @@ $app->put( 'token', 'App\Http\Controllers\TokenController@putToken' );
 $app->group( ['prefix' => 'v1/user', 'middleware' => 'token'], function () use ( $app ) {
     $app->get( 'info', 'App\Http\Controllers\Student\InfoController@get' );
     $app->get( 'courseScore', 'App\Http\Controllers\Student\ScoreController@getCourseScore' );
+    $app->get( 'levelScore', 'App\Http\Controllers\Student\ScoreController@getLevelScore' );
 } );
 

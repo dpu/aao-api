@@ -20,4 +20,17 @@ class ScoreController extends BaseController
         return response()->json( ['message' => 'Success', 'data' => $eduSystem->coursesScores( $semester )], 200 );
     }
 
+
+    public function getLevelScore( Request $request )
+    {
+        $userId = $request->input( 'userId', null );
+
+        $modelStudent = (new \App\Library\Student)->getById( $userId );
+
+        $eduSystem = new Qznjw2014( $modelStudent->username, $modelStudent->password );
+
+        return response()->json( ['message' => 'Success', 'data' => $eduSystem->levelScores()], 200 );
+
+    }
+
 }
