@@ -18,5 +18,7 @@ $app->group( ['prefix' => 'v1/user', 'middleware' => 'token'], function () use (
     $app->get( 'timetable', 'App\Http\Controllers\Student\TimetableController@get' );
     $app->get( 'currentweek', 'App\Http\Controllers\Student\CurrentWeekController@get' );
     $app->get( 'examsinfo', 'App\Http\Controllers\Student\ExamInfoController@get' );
+    $app->post( 'password', 'App\Http\Controllers\Student\PasswordController@reset' );
+    $app->put( 'password', 'App\Http\Controllers\Student\PasswordController@update' );
 } );
 

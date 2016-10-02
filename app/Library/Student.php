@@ -75,4 +75,19 @@ class Student
         return $student;
     }
 
+    public function setPassword( $userId, $new )
+    {
+        $modelStudent = (new \App\Models\Student)->where( ['id' => $userId] )->first();
+
+        if ( is_null( $modelStudent ) ) {
+            return null;
+        }
+
+        $modelStudent->password = $new;
+
+        $modelStudent->save();
+
+        return true;
+    }
+
 }
