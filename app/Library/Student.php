@@ -61,4 +61,18 @@ class Student
         return $id;
     }
 
+    /**
+     * 获取 用户信息 由 id
+     * @param $userId
+     * @return mixed
+     */
+    public function getById( $userId )
+    {
+        $modelStudent = new \App\Models\Student;
+
+        $student = $modelStudent->where( ['id' => $userId] )->first();
+
+        return $student;
+    }
+
 }

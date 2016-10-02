@@ -8,7 +8,7 @@ $app->delete( 'token', 'App\Http\Controllers\TokenController@deleteToken' );
 $app->put( 'token', 'App\Http\Controllers\TokenController@putToken' );
 
 
-$app->group( ['prefix' => 'v1/user'], function () use ( $app ) {
-    $app->get( 'info', 'App\Http\Controllers\Student\InfoController@index' );
+$app->group( ['prefix' => 'v1/user', 'middleware' => 'token'], function () use ( $app ) {
+    $app->get( 'info', 'App\Http\Controllers\Student\InfoController@get' );
 } );
 
