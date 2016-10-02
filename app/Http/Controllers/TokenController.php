@@ -20,6 +20,12 @@ class TokenController extends Controller
         //
     }
 
+
+    /**
+     * 获取 Token
+     * @param Request $request
+     * @return String json
+     */
     public function getToken( Request $request )
     {
         $username = $request->input( 'username', null );
@@ -59,10 +65,58 @@ class TokenController extends Controller
         Cache::put( $token, $userId, Carbon::now()->addDays( 1 ) );
         Cache::put( $tokenImage, $token, Carbon::now()->addDays( 1 ) );
 
-        $body = ['userId' => $userId, 'username' => $username, 'token' => $token];
+        $body = ['message' => 'Success', 'userId' => $userId, 'username' => $username, 'token' => $token];
 
         $tokenTimestamp = time();
 
         return response( $body, 200 )->header( 'Token-Timestamp', $tokenTimestamp );
+    }
+
+
+    /**
+     * 删除 Token
+     * @param Request $request
+     * @return mixed
+     */
+    public function deleteToken( Request $request )
+    {
+        $token = $request->input( 'token', null );
+
+        if ( Cache::has( $token ) ) {
+            $tokenImage = 'userId' . Cache::get( $token );
+            Cache::pull( $token );
+            Cache::pull( $tokenImage );
+
+            return response()->json( ['message' => 'Success', 'token' => $token], 200 );
+        }
+
+        return response()->json( ['message' => 'Error, Wrong token', 'token' => $token], 404 );
+    }
+
+
+    /**
+     * 续期 Token
+     * @param Request $request
+     * @return mixed
+     */
+    public function putToken( Request $request )
+    {
+        $token = $request->input( 'token', null );
+
+        if ( Cache::has( $token ) ) {
+
+            $userId     = Cache::get( $token );
+            $tokenImage = 'userId' . $userId;
+
+            Cache::pull( $token );
+            Cache::pull( $tokenImage );
+
+            Cache::put( $token, $userId, Carbon::now()->addDays( 1 ) );
+            Cache::put( $tokenImage, $token, Carbon::now()->addDays( 1 ) );
+
+            return response()->json( ['message' => 'Success', 'userId' => $userId, 'token' => $token], 200 );
+        }
+
+        return response()->json( ['message' => 'Error, Wrong token', 'token' => $token], 404 );
     }
 }
