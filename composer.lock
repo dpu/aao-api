@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "04f96b01629fc189c0f3890b1497efec",
-    "content-hash": "3fc07513827ba2c737891d48cf814d6a",
+    "hash": "00ff27954f5421ae9d0716ec1cd49b46",
+    "content-hash": "ef75da8bb8c4e593bf2f05974b10fcc3",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -2199,6 +2199,54 @@
                 "environment"
             ],
             "time": "2016-09-01 10:05:43"
+        },
+        {
+            "name": "xu42/qznjw2014",
+            "version": "1.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/xu42/Qznjw2014.git",
+                "reference": "115bdf6da97987ebe64f512f2ecf7e84cf2bf418"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://packagist.phpcomposer.com/files/xu42/Qznjw2014/115bdf6da97987ebe64f512f2ecf7e84cf2bf418.zip",
+                "reference": "115bdf6da97987ebe64f512f2ecf7e84cf2bf418",
+                "shasum": ""
+            },
+            "require": {
+                "php": "~5.5|~7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Xu42\\Qznjw2014\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "xu42",
+                    "homepage": "http://xu42.cn",
+                    "role": "Developer"
+                }
+            ],
+            "description": "强智教学一体化服务平台 实现成绩课表等部分信息查询接口",
+            "homepage": "https://github.com/xu42/Qznjw2014",
+            "keywords": [
+                "dlpu",
+                "qznjw2014",
+                "xu42",
+                "强智",
+                "教务"
+            ],
+            "time": "2016-09-21 03:35:23"
         }
     ],
     "packages-dev": [

@@ -11,6 +11,14 @@
 |
 */
 
-$app->get('/', function () use ($app) {
-    return $app->version();
+$app->group( ['prefix' => 'v1/'], function () use ($app) {
+    require 'v1.php';
 });
+
+$app->get('cache', function (){
+    $k[] = \Illuminate\Support\Facades\Cache::get('ca7bcd21a229ae3f676729747f5dace5');
+    $k[] = \Illuminate\Support\Facades\Cache::get('userId3');
+
+    return $k;
+});
+
