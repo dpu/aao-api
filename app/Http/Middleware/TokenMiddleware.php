@@ -31,7 +31,7 @@ class TokenMiddleware
 
 
         if ((time()-$timestamp) >= 30){
-            return response()->json( ['message' => 'Error, Expired Timestamp'], 404 );
+            return response()->json( ['message' => 'Error, Expired Timestamp'], 403 );
         }
 
         $modelKey = (new \App\Models\Key)->where( ['key' => $key] )->first();
@@ -41,7 +41,7 @@ class TokenMiddleware
         }
 
         if ( !Cache::has( $tokenImage ) ) {
-            return response()->json( ['message' => 'Error, Token does not exist'], 404 );
+            return response()->json( ['message' => 'Error, Token does not exist'], 403 );
         }
 
         $token    = Cache::get( $tokenImage );

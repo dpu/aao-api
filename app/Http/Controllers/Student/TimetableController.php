@@ -15,7 +15,7 @@ class TimetableController extends BaseController
         $week     = $request->header( 'week', null );
 
         if ( is_null( $semester ) ) {
-            return response()->json( ['message' => 'Error, Missing parameters'], 404 );
+            return response()->json( ['message' => 'Error, Missing parameters'], 403 );
         }
 
         $modelStudent = (new \App\Library\Student)->getById( $userId );
