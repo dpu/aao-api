@@ -10,7 +10,8 @@
         "vlucas/phpdotenv": "~2.2",
         "predis/predis": "^1.1",
         "illuminate/redis": "^5.3",
-        "xu42/qznjw2014": "^1.0"
+        "xu42/qznjw2014": "^1.0",
+        "barryvdh/laravel-cors": "^0.8.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

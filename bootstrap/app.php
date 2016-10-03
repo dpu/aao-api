@@ -59,14 +59,15 @@ $app->singleton(
 |
 */
 
-// $app->middleware([
-//    App\Http\Middleware\ExampleMiddleware::class
-// ]);
+ $app->middleware([
+    Barryvdh\Cors\HandleCors::class,
+ ]);
 
  $app->routeMiddleware([
      'auth' => App\Http\Middleware\Authenticate::class,
      'token' => App\Http\Middleware\TokenMiddleware::class,
      'jsonp' => App\Http\Middleware\JSONPMiddleware::class,
+     'cors' => Barryvdh\Cors\LumenServiceProvider::class,
  ]);
 
 /*
@@ -80,10 +81,12 @@ $app->singleton(
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
+$app->register(App\Providers\AppServiceProvider::class);
 $app->register(App\Providers\AuthServiceProvider::class);
 $app->register(App\Providers\EventServiceProvider::class);
 $app->register(Illuminate\Redis\RedisServiceProvider::class);
+$app->register(Barryvdh\Cors\LumenServiceProvider::class);
+
 /*
 |--------------------------------------------------------------------------
 | Load The Application Routes
