@@ -12,7 +12,12 @@ Please see [Introduction](https://xu42.github.io/dlpu-aao-api/) For Apply APIKEY
 
 1. Apply for APIKEY by email.
 > To: xu42.cn@gmail.com  
-> Subject: Dlpu-AAO-Api Apply for APIKEY
+> Subject: Dlpu-AAO-Api Apply for APIKEY  
+> Body:  
+>> username: ***    
+>> realname: ***  
+>> email: ***  
+>> tel:***
 
 2. Please see [Api Document](https://xu42.github.io/dlpu-aao-api/doc/).  
 
