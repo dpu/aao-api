@@ -22,6 +22,6 @@ class TimeController extends Controller
         return response()->json( [
             'message' => 'Success',
             'time'    => time()
-        ] )->setCallback( $request->input( 'callback' ) );
+        ] );
     }
 }
