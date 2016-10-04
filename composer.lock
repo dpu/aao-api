@@ -2255,16 +2255,16 @@
         },
         {
             "name": "xu42/qznjw2014",
-            "version": "1.0.7",
+            "version": "1.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/xu42/Qznjw2014.git",
-                "reference": "9b5641d5ff27caa5801440b99f819ddb456b48e2"
+                "reference": "529deb4387d5d4512e636d4a9006bfec085d5ed7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://packagist.phpcomposer.com/files/xu42/Qznjw2014/9b5641d5ff27caa5801440b99f819ddb456b48e2.zip",
-                "reference": "9b5641d5ff27caa5801440b99f819ddb456b48e2",
+                "url": "https://packagist.phpcomposer.com/files/xu42/Qznjw2014/529deb4387d5d4512e636d4a9006bfec085d5ed7.zip",
+                "reference": "529deb4387d5d4512e636d4a9006bfec085d5ed7",
                 "shasum": ""
             },
             "require": {
@@ -2299,7 +2299,7 @@
                 "强智",
                 "教务"
             ],
-            "time": "2016-10-02 16:12:05"
+            "time": "2016-10-04 11:03:25"
         }
     ],
     "packages-dev": [
