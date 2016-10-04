@@ -11,6 +11,10 @@
 |
 */
 
+$app->get('/', function (){
+    return redirect('https://xu42.github.io/dlpu-aao-api/');
+});
+
 $app->group( ['prefix' => 'v1/', 'middleware' => 'jsonp'], function () use ($app) {
     require 'v1.php';
 });
