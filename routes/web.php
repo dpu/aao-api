@@ -16,3 +16,5 @@ $app->group( ['prefix' => 'v1/', 'middleware' => 'jsonp'], function () use ($app
 });
 
 
+// Github 自动部署
+$app->post('deploy', 'DeployController@github');
