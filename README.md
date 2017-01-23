@@ -19,4 +19,4 @@ Dalian Polytechnic University, Academic Affairs Office
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The GPL2.0 License. Please see [License File](LICENSE.md) for more information.
