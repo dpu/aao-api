@@ -21,7 +21,7 @@ $app->group( ['prefix' => 'user', 'middleware' => 'token'], function () use ( $a
 } );
 
 $app->group(['prefix' => 'news'], function () use ($app){
-    $app->get('currentEvents', 'DlpuNews\DlpuNews@getCurrentEvents');
-    $app->get('notice', 'DlpuNews\DlpuNews@getNotice');
-    $app->get('teachingFiles', 'DlpuNews\DlpuNews@getTeachingFiles');
+    $app->get('currentEvents', 'DlpuNews\DlpuNewsController@getCurrentEvents');
+    $app->get('notice', 'DlpuNews\DlpuNewsController@getNotice');
+    $app->get('teachingFiles', 'DlpuNews\DlpuNewsController@getTeachingFiles');
 });
