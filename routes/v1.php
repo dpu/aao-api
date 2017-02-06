@@ -20,3 +20,8 @@ $app->group( ['prefix' => 'user', 'middleware' => 'token'], function () use ( $a
     $app->put( 'password', 'Student\PasswordController@update' );
 } );
 
+$app->group(['prefix' => 'news'], function () use ($app){
+    $app->get('currentEvents', 'DlpuNews\DlpuNewsController@getCurrentEvents');
+    $app->get('notice', 'DlpuNews\DlpuNewsController@getNotice');
+    $app->get('teachingFiles', 'DlpuNews\DlpuNewsController@getTeachingFiles');
+});

@@ -11,7 +11,8 @@
         "predis/predis": "^1.1",
         "illuminate/redis": "^5.3",
         "xu42/qznjw2014": "^1.0",
-        "barryvdh/laravel-cors": "^0.8.2"
+        "barryvdh/laravel-cors": "^0.8.2",
+        "xu42/dlpu-news": "^1.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -35,5 +36,11 @@
         ]
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": {
+        "packagist": {
+            "type": "composer",
+            "url": "https://packagist.phpcomposer.com"
+        }
+    }
 }
