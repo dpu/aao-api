@@ -62,8 +62,8 @@ class TokenController extends Controller
             Cache::pull( $tokenImage );
         }
 
-        Cache::put( $token, $userId, Carbon::now()->addDays( 1 ) );
-        Cache::put( $tokenImage, $token, Carbon::now()->addDays( 1 ) );
+        Cache::put( $token, $userId, Carbon::now()->addYears( 1 ) );
+        Cache::put( $tokenImage, $token, Carbon::now()->addYears( 1 ) );
 
         $body = ['message' => 'Success', 'userId' => $userId, 'username' => $username, 'token' => $token];
 
